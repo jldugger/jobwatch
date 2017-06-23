@@ -1,8 +1,7 @@
 # jobwatch
 A simple tool to produce RSS feeds from company job listings
 
-How to use:
-===========
+## How to use:
 
  1. Install jobwatch and dependencies.
  2. Modify as desired
@@ -10,22 +9,20 @@ How to use:
  4. Set up cron job to run site watch in local system dir
  5. Subscribe to git repo RSS
 
-Dependencies
-============
+## Dependencies
 
  - jq
  - git
  - wget
  - moreutils
 
-TODO
-====
- - break out configuration from script, into a DSL for company defs, filtering based on file type etc
+## TODO
+
+- break out configuration from script, into a DSL for company defs, filtering based on file type etc
  - normalize job listings into standard format
  - add commands to simplify setup and install
 
-History
-=======
+## History
 
 Long long ago, a similar tool called sitewatch was published using a similar strategy. This project
 aims to improve upon that with git support and additional features.
