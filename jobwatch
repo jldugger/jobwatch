@@ -21,5 +21,7 @@ sed -i -e 's/\<script.*script\>//' -e 's/\<meta .*\>//' newrelic
 #normalize json
 cat pagerduty | jq . | sponge pagerduty
 
+# send to github
 git add .
 git commit -m "new jobs found on $DATE"
+git push
