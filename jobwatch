@@ -15,8 +15,8 @@ wget -O pagerduty 'https://www.pagerduty.com/wp-content/themes/startit-child/ass
 wget -O sentry 'https://sentry.io/jobs/'
 
 #normalize html
-sed -i -e 's/\<script.*script\>//' -e 's/\<meta .*\>//' puppet
-sed -i -e 's/\<script.*script\>//' -e 's/\<meta .*\>//' newrelic
+sed -i -e 's/\<script.*script\>//' -e 's/\<meta .*\>//' -e 's/<link rel="stylesheet".*\">//' puppet
+sed -i -e 's/\<script.*script\>//' -e 's/\<meta .*\>//' -e 's/<link rel="stylesheet".*\">//' newrelic
 sed -i -e 's/<link rel="stylesheet".*\">//' -e 's/\<script.*script\>//' sentry
 
 #normalize json
