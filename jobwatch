@@ -20,7 +20,7 @@ sed -i -e 's/\<script.*script\>//' -e 's/\<meta .*\>//' -e 's/<link rel="stylesh
 sed -i -e 's/<link rel="stylesheet".*\">//' -e 's/\<script.*script\>//' sentry
 
 #normalize json
-cat pagerduty | jq . | sponge pagerduty
+jq . pagerduty |  sponge pagerduty
 
 # send to github
 git add .
