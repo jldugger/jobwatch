@@ -12,15 +12,10 @@ git pull
 wget -O puppet 'https://boards.greenhouse.io/embed/job_board?for=puppetinc&b=https://puppet.com/company/careers/jobs'
 wget -O newrelic 'https://newrelic.com/about/careers'
 wget -O pagerduty 'https://www.pagerduty.com/wp-content/themes/startit-child/assets/js/json/jobs/'
-wget -O sentry 'https://sentry.io/jobs/'
 
 #normalize html
 sed -i -e 's/\<script.*script\>//' -e 's/\<meta .*\>//' -e 's/<link rel="stylesheet".*>//' puppet
 sed -i -e 's/\<script.*script\>//' -e 's/\<meta .*\>//' -e 's/<link rel="stylesheet".*\">//' newrelic
-sed -i -e 's/<link rel="stylesheet".*\">//' -e 's/\<script.*script\>//' sentry
-
-#normalize json
-jq . pagerduty |  sponge pagerduty
 
 # send to github
 git add .
